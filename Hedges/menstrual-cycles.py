@@ -216,15 +216,6 @@ if __name__ == "__main__":
             'media_intervencion': 2.0,
             'de_control': 0.5,
             'de_intervencion': 0.7
-        },
-        {
-            'nombre': 'Estudio D',
-            'n_control': 90,
-            'n_intervencion': 92,
-            'media_control': 25.7,
-            'media_intervencion': 22.9,
-            'de_control': 3.5,
-            'de_intervencion': 3.2
         }
     ]
     
