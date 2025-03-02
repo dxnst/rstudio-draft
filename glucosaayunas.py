@@ -161,22 +161,13 @@ if __name__ == "__main__":
             'de_intervencion': 8.5
         },
         {
-            'nombre': 'Estudio C',
-            'n_control': 120,
-            'n_intervencion': 115,
-            'media_control': 24.9,
-            'media_intervencion': 23.2,
-            'de_control': 2.8,
-            'de_intervencion': 3.0
-        },
-        {
-            'nombre': 'Estudio D',
-            'n_control': 90,
-            'n_intervencion': 92,
-            'media_control': 25.7,
-            'media_intervencion': 22.9,
-            'de_control': 3.5,
-            'de_intervencion': 3.2
+            'nombre': 'Nordio, 2021',
+            'n_control': 20,
+            'n_intervencion': 20,
+            'media_control': 105,
+            'media_intervencion': 99,
+            'de_control': 0.93,
+            'de_intervencion': 1.375
         }
     ]
     

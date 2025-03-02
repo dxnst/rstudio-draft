@@ -143,40 +143,31 @@ if __name__ == "__main__":
     # Datos ficticios de múltiples estudios (por ejemplo, reducción de IMC)
     estudios_ejemplo = [
         {
-            'nombre': 'Shokrpour, 2019',
-            'n_control': 26,
-            'n_intervencion': 27,
-            'media_control': 11.9,
-            'media_intervencion': 10.8,
-            'de_control': 2.4,
-            'de_intervencion': 3
-        },
-        {
             'nombre': 'Troisi, 2019',
             'n_control': 15,
             'n_intervencion': 15,
-            'media_control': 8,
-            'media_intervencion': 7.9,
-            'de_control': 3.1,
-            'de_intervencion': 3.8
+            'media_control': 42.7,
+            'media_intervencion': 34.98,
+            'de_control': 9.91,
+            'de_intervencion': 8.11
         },
         {
             'nombre': 'Nordio, 2021',
             'n_control': 20,
             'n_intervencion': 20,
-            'media_control': 21,
-            'media_intervencion': 15.5,
-            'de_control': 1.56,
-            'de_intervencion': 1.313
+            'media_control': 63,
+            'media_intervencion': 37,
+            'de_control': 11.8,
+            'de_intervencion': 9.8
         },
         {
             'nombre': 'Genazzani, 2019',
             'n_control': 24,
             'n_intervencion': 24,
-            'media_control': 12.6,
-            'media_intervencion': 9.8,
-            'de_control': 2.4,
-            'de_intervencion': 1.8
+            'media_control': 54.3,
+            'media_intervencion': 54.8,
+            'de_control': 5.0,
+            'de_intervencion': 7.0
         }
     ]
     

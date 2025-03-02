@@ -167,25 +167,34 @@ if __name__ == "__main__":
             'media_control': 28.4,
             'media_intervencion': 26.4,
             'de_control': 1.7,
-            'de_intervencion'1.7: 
+            'de_intervencion':1.7 
         },
         {
-            'nombre': 'Singh, 2020',
-            'n_control': 66,
-            'n_intervencion': 66,
-            'media_control': ,
-            'media_intervencion': ,
-            'de_control': ,
-            'de_intervencion': 
-        }
+            'nombre': 'Nordio, 2019',
+            'n_control': 8,
+            'n_intervencion': 8,
+            'media_control': 24.08,
+            'media_intervencion': 23.91,
+            'de_control': 3.0,
+            'de_intervencion':2.9 
+        },
         {
-            'nombre': 'Soldat-Stankovic, 2021',
-            'n_control': 30,
-            'n_intervencion': 30,
-            'media_control': ,
-            'media_intervencion': ,
-            'de_control': ,
-            'de_intervencion': 
+            'nombre': 'Nordio, 2021',
+            'n_control': 20,
+            'n_intervencion': 20,
+            'media_control': 28,
+            'media_intervencion': 26,
+            'de_control': 0.625,
+            'de_intervencion': 0.313 
+        },      
+        {
+            'nombre': 'Genazzani, 2019',
+            'n_control': 24,
+            'n_intervencion': 24,
+            'media_control': 28.4,
+            'media_intervencion': 27.1,
+            'de_control': 1.7,
+            'de_intervencion': 1.3
         }
 
     ]

@@ -143,7 +143,7 @@ if __name__ == "__main__":
     # Datos ficticios de múltiples estudios (por ejemplo, reducción de IMC)
     estudios_ejemplo = [
         {
-            'nombre': 'Shokrpour et. al. 2019',
+            'nombre': 'Shokrpour, 2019',
             'n_control': 26,
             'n_intervencion': 27,
             'media_control': 2.8,
@@ -152,31 +152,40 @@ if __name__ == "__main__":
             'de_intervencion': 0.8
         },
         {
-            'nombre': 'Estudio B',
-            'n_control': 75,
-            'n_intervencion': 80,
-            'media_control': 26.1,
-            'media_intervencion': 24.5,
-            'de_control': 3.8,
-            'de_intervencion': 3.5
+            'nombre': 'Troisi, 2019',
+            'n_control': 15,
+            'n_intervencion': 15,
+            'media_control': 1.68,
+            'media_intervencion': 1.76,
+            'de_control': 0.64,
+            'de_intervencion': 0.99
         },
         {
-            'nombre': 'Estudio C',
-            'n_control': 120,
-            'n_intervencion': 115,
-            'media_control': 24.9,
-            'media_intervencion': 23.2,
-            'de_control': 2.8,
-            'de_intervencion': 3.0
+            'nombre': 'Nordio, 2019',
+            'n_control': 8,
+            'n_intervencion': 8,
+            'media_control': 5.05,
+            'media_intervencion': 2.45,
+            'de_control': 1.51,
+            'de_intervencion': 0.68
         },
         {
-            'nombre': 'Estudio D',
-            'n_control': 90,
-            'n_intervencion': 92,
-            'media_control': 25.7,
-            'media_intervencion': 22.9,
-            'de_control': 3.5,
-            'de_intervencion': 3.2
+            'nombre': 'Nordio, 2021',
+            'n_control': 20,
+            'n_intervencion': 20,
+            'media_control': 4.4,
+            'media_intervencion': 3,
+            'de_control': 0.307,
+            'de_intervencion': 0.263
+        },
+        {
+            'nombre': 'Genazzani, 2019',
+            'n_control': 24,
+            'n_intervencion': 24,
+            'media_control': 2.8,
+            'media_intervencion': 1.9,
+            'de_control': 0.6,
+            'de_intervencion': 0.5
         }
     ]
     
