@@ -47,18 +47,27 @@ analizar_parametro <- function(archivo) {
     hakn = TRUE
   )
   
-  # Guardar forest plot directamente a un archivo PDF
+  # Guardar forest plot directamente a un archivo PDF con colores mejorados
   pdf(paste0("forest_plot_", nombre_parametro, ".pdf"), width = 10, height = 8)
   forest(
     resultado_meta,
     sortvar = TE,
     prediction = TRUE,
     label.left = "Favorece control",
-    label.right = "Favorece intervención",
-    leftlabs = c("Estudio", "n_i", "n_c", "g", "95%-CI", "Peso"),
+    label.right = "Favorece inositol",
+    leftlabs = c("Estudio", "n_i", "n_c", "DME", "IC 95%", "Peso"),
     print.tau2 = TRUE,
     print.I2 = TRUE,
-    main = paste("Forest Plot:", nombre_parametro)
+    col.diamond = "darkblue",
+    col.diamond.lines = "blue",
+    col.predict = "red",
+    col.predict.lines = "darkred",
+    col.square = "darkgreen",
+    col.study = "black",
+    main = paste("Gráfico de bosque:", nombre_parametro),
+    text.predict = "Intervalo de predicción",
+    text.random = "Modelo de efectos aleatorios",
+    text.w.random = "Peso relativo"
   )
   dev.off()
   
@@ -90,18 +99,25 @@ analizar_parametro <- function(archivo) {
       hakn = TRUE
     )
     
-    # Guardar forest plot de subgrupos
+    # Guardar forest plot de subgrupos con colores mejorados
     pdf(paste0("subgrupos_", nombre_parametro, ".pdf"), width = 10, height = 10)
     forest(
       subgrupos_meta,
       sortvar = TE,
       prediction = FALSE,
       label.left = "Favorece control",
-      label.right = "Favorece intervención",
-      leftlabs = c("Intervención/Estudio", "n_i", "n_c", "g", "95%-CI", "Peso"),
+      label.right = "Favorece inositol",
+      leftlabs = c("Intervención/Estudio", "n_i", "n_c", "DME", "IC 95%", "Peso"),
       print.tau2 = TRUE,
       print.I2 = TRUE,
-      main = paste("Comparación de Intervenciones:", nombre_parametro)
+      col.diamond = "darkblue",
+      col.diamond.lines = "blue",
+      col.square = "darkgreen",
+      col.by = "darkred",
+      col.study = "black",
+      main = paste("Comparación de Intervenciones:", nombre_parametro),
+      text.random = "Modelo de efectos aleatorios",
+      text.w.random = "Peso relativo"
     )
     dev.off()
   }
@@ -171,20 +187,23 @@ analisis_completo <- function() {
   # Crear un gráfico resumen con ggplot2 y guardarlo directamente
   p <- ggplot(tabla_resumen, 
               aes(x = reorder(parametro, efecto), y = efecto, 
-                  ymin = ic_inferior, ymax = ic_upper)) +
-    geom_pointrange() +
+                  ymin = ic_inferior, ymax = ic_superior)) +
+    geom_pointrange(color = "darkblue", size = 0.8) +
     geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
     coord_flip() +
     labs(
-      title = "Efecto del Inositol en Parámetros de PCOS",
-      subtitle = "Diferencia de Medias Estandarizada (SMD) con 95% IC",
+      title = "Efecto del Inositol en Parámetros de SOPQ",
+      subtitle = "Diferencia de Medias Estandarizada (DME) con IC 95%",
       x = "Parámetro Clínico",
-      y = "Tamaño del Efecto (SMD)"
+      y = "Tamaño del Efecto (DME)"
     ) +
     theme_minimal() +
     theme(
       plot.title = element_text(face = "bold"),
-      axis.text.y = element_text(face = "bold")
+      axis.text.y = element_text(face = "bold"),
+      legend.position = "bottom",
+      panel.grid.major = element_line(color = "gray90"),
+      panel.grid.minor = element_line(color = "gray95")
     )
   
   ggsave("grafico_resumen.png", p, width = 10, height = 6, dpi = 300)
@@ -241,18 +260,28 @@ analizar_homa_ir_detalle <- function() {
     hakn = TRUE
   )
   
-  # Guardar forest plot para HOMA-IR
+  # Guardar forest plot para HOMA-IR con colores mejorados
   pdf("homa_ir_detalle.pdf", width = 12, height = 10)
   forest(
     homa_meta,
     sortvar = TE,
     prediction = TRUE,
     label.left = "Favorece control",
-    label.right = "Favorece intervención",
-    leftlabs = c("Intervención/Estudio", "n_i", "n_c", "g", "95%-CI", "Peso"),
+    label.right = "Favorece inositol",
+    leftlabs = c("Intervención/Estudio", "n_i", "n_c", "DME", "IC 95%", "Peso"),
     print.tau2 = TRUE,
     print.I2 = TRUE,
-    main = "Efecto del Inositol en HOMA-IR por tipo de intervención"
+    col.diamond = "darkblue",
+    col.diamond.lines = "blue",
+    col.predict = "red",
+    col.predict.lines = "darkred",
+    col.square = "darkgreen",
+    col.by = "purple",
+    col.study = "black",
+    main = "Efecto del Inositol en HOMA-IR por tipo de intervención",
+    text.predict = "Intervalo de predicción",
+    text.random = "Modelo de efectos aleatorios",
+    text.w.random = "Peso relativo"
   )
   dev.off()
   
@@ -266,17 +295,21 @@ analizar_homa_ir_detalle <- function() {
   
   if(nrow(datos_ratio) > 0) {
     p <- ggplot(datos_ratio, aes(x = ratio_num, y = TE, size = 1/seTE)) +
-      geom_point(alpha = 0.7) +
-      geom_smooth(method = "loess", se = TRUE, color = "blue") +
-      geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+      geom_point(alpha = 0.7, color = "darkblue") +
+      geom_smooth(method = "loess", se = TRUE, color = "red", fill = "pink") +
+      geom_hline(yintercept = 0, linetype = "dashed", color = "darkgray") +
       scale_x_log10() +
       labs(
         title = "Relación entre Ratio MI:DCI y Efecto en HOMA-IR",
         x = "Ratio MI:DCI (escala logarítmica)",
-        y = "Tamaño del Efecto (SMD)",
+        y = "Tamaño del Efecto (DME)",
         size = "Precisión"
       ) +
-      theme_minimal()
+      theme_minimal() +
+      theme(
+        plot.title = element_text(face = "bold"),
+        legend.position = "bottom"
+      )
     
     ggsave("homa_ir_ratio.png", p, width = 10, height = 6, dpi = 300)
   }
@@ -305,4 +338,3 @@ print("Análisis completado. Los resultados se han guardado como archivos PDF y 
 cat("\nResumen de hallazgos por parámetro:\n")
 results_summary <- read.csv("resumen_metanalisis.csv")
 print(results_summary)
-
