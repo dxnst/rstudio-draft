@@ -1,0 +1,5 @@
+Study,Intervention_Group,Control_Group,Control_N,Intervention_N,Intervention_Mean,Intervention_SD,Control_Mean,Control_SD,Duration
+Agrawal 2019,1.5g Metformina + 1.8g Inositol,1.5g Metformina,60,60,81.725,7.47,83.35,7.8,3 months
+Bahadur 2021,1g Metformina + 1.4g Inositol,1g Metformina,36,36,84.58,5.63,87.5,8.25,6 months
+Ibrahim 2023,1g Metformina + 4g Inositol,1g Metformina,17,15,99.59,10.74,97.67,5.43,3 months
+Thakur 2020,1g Metformina + 1.1g Inositol,1.5g Metformina,22,21,89.23,4.66,88.16,4.87,6 months
