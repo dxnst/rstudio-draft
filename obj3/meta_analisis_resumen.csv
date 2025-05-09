@@ -1,0 +1,6 @@
+"Outcome","Efecto","Lower","Upper","Medida","Pvalue","I2","Outcome_es","Estimador","Significativo","Heterogeneidad","Medida_es"
+"IMC",0.693680730296457,-0.68128547803049,2.0686469386234,"MD",0.233896661333077,0.274573142724163,"IMC","0.69 [-0.68, 2.07]","No","Moderada","Diferencia de Medias"
+"HOMA-IR",-0.0830399205975458,-0.291343132688069,0.125263291492977,"MD",0.330448348192136,0,"HOMA-IR","-0.08 [-0.29, 0.13]","No","Baja","Diferencia de Medias"
+"Glucosa Ayunas",-0.766787246506862,-4.07265094446966,2.53907645145594,"MD",0.513916993092993,0.320115139516786,"Glucosa en Ayunas","-0.77 [-4.07, 2.54]","No","Moderada","Diferencia de Medias"
+"Insulina Ayunas",-0.56002384367801,-0.879590049153058,-0.240457638202961,"MD",0.00824596030523118,0,"Insulina en Ayunas","-0.56 [-0.88, -0.24]","Sí","Baja","Diferencia de Medias"
+"Regularización Menstrual (RR)",0.521892523747485,-0.752786503295064,1.79657155079003,"RR",0.220191161325204,0.804621801324198,"Regularización Menstrual (RR)","0.52 [-0.75, 1.80]","No","Alta","Riesgo Relativo"
